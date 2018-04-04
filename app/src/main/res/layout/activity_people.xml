@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a1694581.movieapplication.People">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:onClick="PersonBackPage"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search People"
+            android:id="@+id/PeopleSearch"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:onClick="PersonSearch"
+            android:text="Find"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/PeopleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+
+        android:layout_marginTop="4dp"
+        android:text="Popular People"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/People"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:orientation="vertical"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pervious Page"
+            android:inputType="text"
+            android:textSize="14dp"
+            android:onClick="peopleBack"
+            android:id="@+id/peopleBackPage"
+            android:layout_gravity="right"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="Next Page"
+            android:id="@+id/peopleNextPage"
+            android:onClick="peopleNext"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>
